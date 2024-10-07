@@ -1,0 +1,1 @@
+cube = lambda x: x*x*x
