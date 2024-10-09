@@ -52,3 +52,33 @@ class Library:
       print(f"{title} by {info['author']} - Copies: {info['count']}")
 
 
+# Creating the library system
+Library.library_info()
+
+
+# Adding books to the library
+book1 = Library("The Great Gatsby", "F. Scott Fitzgerald")
+book2 = Library("To Kill a Mockingbird", "Harper Lee")
+book3 = Library("1984", "George Orwell")
+
+
+# Displaying total books and available books
+print(Library.get_total_books())
+Library.display_available_books()
+
+# Lending and returning a book
+book1.lend_book("1984")
+book1.return_book("1984")
+
+
+# Displaying books after lending and returning
+Library.display_available_books()
+
+
+# Trying to remove a book
+del book3
+print(Library.get_total_books())
+
+
+# Displaying library info again
+Library.library_info()
